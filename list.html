@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>servername_list</title>
+    <link rel="stylesheet" href="http://s10.mogucdn.com/__/mfp/mgj-admin-doc/assets/v1.0.8/lib/bootstrap/3.3.6/css/bootstrap.css">
+    <link rel="stylesheet" href="http://s10.mogucdn.com/__/mfp/mgj-admin-doc/assets/v1.0.8/lib/font-awesome/4.6.3/css/font-awesome.css?v=1">
+    <link rel="stylesheet" href="http://s10.mogucdn.com/__newtown/mht_ipaas_webx/assets/bundle201806191131.css">
+        <!-- <link rel="stylesheet" href="http://s10.mogucdn.com/__newtown/mht_ipaas_webx/assets/bundle123.css">-->
+
+</head>
+ <body>
+    <h1>server_name</h1>
+    <table border="8">
+        {% for servername in servernames %}
+        <tr>
+            <td>
+                {{ servername }}
+            </td>
+            <td  width="85%">
+            {% for name in servernames[servername] %}</a>
+                <a href="/show?file={{ servername }}&name={{ name }}&type=server">{{ name }}</a>
+            {% endfor %}
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+    <h1>upsteam_name</h1>
+
+    <table border="8">
+        {% for upsteamname in upsteamnames %}
+        <tr>
+            <td>
+                {{ upsteamname }}
+            </td>
+            <td  width="85%">
+            {% for name in upsteamnames[upsteamname] %}</a>
+                <a href="/show?file={{ upsteamname }}&name={{ name }}&type=upstream">{{ name }}</a>
+            {% endfor %}
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+    </table>
+  </body>
+</html>
