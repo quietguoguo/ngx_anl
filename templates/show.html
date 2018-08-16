@@ -2,14 +2,29 @@
 <head>
 <title>CodeMirror: NGINX mode</title>
 <meta charset="utf-8"/>
-<link rel=stylesheet href="codemirror/doc/docs.css">
+<link rel=stylesheet href="docs.css">
 
-<link rel="stylesheet" href="codemirror/lib/codemirror.css">
-<script src="codemirror/lib/codemirror.js"></script>
+<link rel="stylesheet" href="codemirror.css">
+<script src="codemirror.js"></script>
 <script src="nginx.js"></script>
 <style>.CodeMirror {background: #f8f8f8;}</style>
-</head>
+        <link rel="stylesheet" href="docs.css">
+    <style>
+    body {
+      margin: 0em auto;
+    }
+    .CodeMirror {
+        border: 1px solid #eee;
+        height: auto;
+        }
 
+    .CodeMirror-scroll {
+        height: auto;
+        overflow-y: hidden;
+        overflow-x: auto;
+    }
+  </style>
+</head>
 
 
 <h2>{{ name }} IN {{ file }}</h2>
