@@ -86,8 +86,8 @@ def edit():
     for i in str:
         f.write(i)
     f.close()
-
-    check = 'Ngx check Success :)'
+    check = ngx_check.ngx_check('/usr/local/nginx/sbin/nginx','conf/nginx.conf')
+    #check = 'Ngx check Success :)'
     if check == 'Ngx check Success :)' :
         str = linecache.getlines (file)
         result = ''
